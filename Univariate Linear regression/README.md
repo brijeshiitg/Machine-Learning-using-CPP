@@ -11,12 +11,15 @@ This directory contains c++ implementation of linar regression with one variable
         $~~~~~~~~~~~~~\frac{\partial{J}}{\partial{b}} = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})$
 
 **Gradient Descent:**
-                
-$ ~~~~~~~~~~~repeat \{ $
-$~~~~~~~~~~~~~~~~~~~ w = w - \alpha * \frac{\partial{J}}{\partial{w}}$
+          
+repeat { 
+         
+$~~~~~w = w - \alpha * \frac{\partial{J}}{\partial{w}}$
+    
 
-$~~~~~~~~~~~~~~~~~~~ b = b - \alpha * \frac{\partial{J}}{\partial{b}}$
-$~~~~~~~~~~~~~~~~~~~\}simultaneous update $
+$~~~~~b = b - \alpha * \frac{\partial{J}}{\partial{b}}$ 
+} simultaneous update
+
                 
 Here, $w$ and $b$ are the learnable parameters, $\alpha$ is the learning rate, $\frac{\partial{J}}{\partial{w}}$ and $\frac{\partial{J}}{\partial{b}}$ are gradients.
 
