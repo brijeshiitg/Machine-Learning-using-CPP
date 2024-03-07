@@ -36,7 +36,7 @@ std::vector<double> computeGradients(std::vector<double> input_features, std::ve
     for (unsigned int i=0; i<size; i++)
     {
         dj_dw += (w * input_features[i] + b - target[i])*input_features[i];
-        dj_dw += (w * input_features[i] + b - target[i]);
+        dj_db += (w * input_features[i] + b - target[i]);
     }
     return std::vector<double> {dj_dw/size, dj_db/size};
 
@@ -90,7 +90,7 @@ int main()
     for(unsigned int i = 0; i < size; i++)
     {
         std::cout << "Enter " << i+1 <<"th " << "target value :";
-        std::cin >> x[i];
+        std::cin >> y[i];
     }
 
     std::cout << std::endl <<"Enter w: ";
@@ -102,19 +102,6 @@ int main()
     std::cout << std::endl <<"Enter no. of iterations: ";
     std::cin >> iterations;
     std::cout << std::endl;
-    // calling linearFunction
-    // std::vector<double> f_wb = linearFunction(x, w, b);
-    // std::cout << "f_wb(x) = ";
-    // for (auto& i : f_wb)
-    // {
-    //     std::cout << i << " ";
-    // }
-    // std::cout << std::endl;
-    // // calling costFunction
-    // std::cout << "Cost: " << costFunction(x, y, w, b) << std::endl;
-    // // calling computeGradients:
-    // std::cout << "dJ/dw = " << computeGradients(x, y, w, b)[0] << " dJ/db = " << computeGradients(x, y, w, b)[1] << std::endl;
-    // calling gradientDescent:
     std::vector<double> final_weigths = gradientDescent(x, y, w, b, lr, iterations);
     std::cout << "final w and b are: " << final_weigths[0] << " " << final_weigths[1] << std::endl;
     return 0;
