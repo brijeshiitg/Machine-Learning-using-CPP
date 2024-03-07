@@ -15,7 +15,7 @@ This directory contains c++ implementation of linar regression with one variable
 $ ~~~~~~~~~~~repeat \{ $
 $~~~~~~~~~~~~~~~~~~~ w = w - \alpha * \frac{\partial{J}}{\partial{w}}$
 
-$~~~~~~~~~~~~~~~~~~~ b = b - \alpha * \frac{\partial{J}}{\partial{b}} $
+$~~~~~~~~~~~~~~~~~~~ b = b - \alpha * \frac{\partial{J}}{\partial{b}}$
 $~~~~~~~~~~~~~~~~~~~\}simultaneous update $
                 
 Here, $w$ and $b$ are the learnable parameters, $\alpha$ is the learning rate, $\frac{\partial{J}}{\partial{w}}$ and $\frac{\partial{J}}{\partial{b}}$ are gradients.
