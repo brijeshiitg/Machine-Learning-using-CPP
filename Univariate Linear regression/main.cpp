@@ -1,6 +1,5 @@
 #include <vector>
 #include <iostream>
-#include <cmath>
 #include "LinearRegression.h"
 
 /** reads input and prints outputs. Interacts with Linear Regression class. */
