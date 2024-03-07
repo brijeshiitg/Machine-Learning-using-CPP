@@ -26,7 +26,7 @@ Here, $w$ and $b$ are the learnable parameters, $\alpha$ is the learning rate, $
 ### Instructions to run the code:
 step 1: go to *Univariate Linear regression* directory and compile and run the code using following command:
 
-        `g++ --std=c++11 *.cpp && ./a.out`
+        g++ --std=c++11 *.cpp && ./a.out
         
 step 2: It will prompt you to enter length of the feature and target array. Enter the length according to your requirements.
 
@@ -37,5 +37,7 @@ step 4: Now it will prompt for initial value of w and b.
 step 5: It will ask learning rate.
 
 step 6: Finally, it will ask for no. of iterations you want to train the model.
+
+step 7: Now, if you want to test the model input 'y' and give input. Otherwise input any other key.
 
 Done!!
