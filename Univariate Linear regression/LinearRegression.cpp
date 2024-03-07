@@ -7,7 +7,20 @@ LinearRegression::LinearRegression()
 
 }
 
-/** Computes the cost function J(w, b). */
+std::vector<double> LinearRegression::modelFunction(std::vector<double> input_features,
+                        double w, 
+                        double b)
+{   
+    int size = input_features.size();
+    std::vector<double> f_wb(size);
+    for (unsigned int i =0; i < size; i++)
+    {
+        f_wb[i] = w * input_features[i] + b;
+    }
+    return f_wb;
+}
+
+
 double LinearRegression::costFunction(std::vector<double> input_features, std::vector<double> target, double w, double b)
 {
     double cost{0.0f};
@@ -19,7 +32,7 @@ double LinearRegression::costFunction(std::vector<double> input_features, std::v
     return cost/(2*size);
 }
 
-/** Computes gradients w.r.t. w and b, dJ/dw and dJ/db.*/
+
 std::vector<double> LinearRegression::computeGradients(std::vector<double> input_features, std::vector<double> target, double w, double b)
 {
     double dj_dw{0.0}, dj_db{0.0};
@@ -37,7 +50,7 @@ std::vector<double> LinearRegression::computeGradients(std::vector<double> input
 
 }
 
-/** Computes gradient descent. */
+
 std::vector<double> LinearRegression::gradientDescent(std::vector<double> input_features, 
                                     std::vector<double> target, 
                                     double w_initial, 

@@ -5,6 +5,11 @@ class LinearRegression
 {
     public:
     LinearRegression();
+
+    /** Computes linear function f(x) = w . x + b*/
+    static std::vector<double> modelFunction(std::vector<double> input_features,
+                        double w, 
+                        double b);
     
     /** Computes the cost function J(w, b). */
     static double costFunction(std::vector<double> input_features, 
